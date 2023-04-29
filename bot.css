@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+ font-family: myFont;
+ src: url("Transformers Movie.ttf");
+}
+:root{
+  --primary-color: #dcf763;
+  --secondary-color: #435058;
+  --text-color: #ffffff;
+  --dark-color:  #000;
+  --light-color: #848c8e;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url('bgg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .header{
+    display: flex;
+  }
+  
+  h1{
+  font-size: 5rem;
+  border-radius: 20px;
+  color: var(--primary-color);
+  font-family: 'myFont';
+}
+
+img{
+  height: 79px;
+  width: 83px;
+}
+.bglogo{
+  position: absolute;
+  top: 51%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  height: 135px;
+  width: 143px;
+}
+
+
+  .chat-container{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+    height: 300px; 
+    width: 500px;
+    overflow-y: scroll;
+    margin: 0.5rem;
+  }
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track{
+    background: var(--secondary-color);
+  }
+  ::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+    border-radius: 5px;
+  }
+  #messages{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .user{
+    grid-column: 2/4;
+    background-color: var(--secondary-color);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    color: var(--text-color);
+    margin: 0.5rem;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  .bot{
+    grid-column: 1/3;
+    background-color: var(--primary-color);
+    text-align: center  ;
+    color: var(--dark-color);
+    margin: 0.5rem;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  .form-container{
+    grid-column: 1/4;
+    margin: 0.5rem;
+    padding: 5px;
+  }
+  
+
+  input{
+    caret-color: var(--primary-color);
+    border: none;
+    padding: 5px;
+    font-size: 1rem;
+    outline: none;
+    width: 90%;
+    border-radius: 2px;
+  }
+  input:focus{
+    border: 2px solid var(--secondary-color);
+  }
+  button{
+    padding: 3px 5px;
+    border: none;
+    margin-left: 15px;
+    border-radius: 2px;
+    height: auto;
+    width: auto;
+    background-color: var(--light-color);
+  }
+  button:hover{
+    background-color: var(--primary-color);
+    transition: all 0.5s;
+    box-shadow: 0 0 5px var(--primary-color);
+  }
+  .flex{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @media only screen and (max-width:600px) {
+    .header{
+      display: flex;
+      flex-direction: column;
+      margin-top: -70%;
+    }
+    img{
+      position: relative;
+      left: 35%;
+    }
+    #chatbot{
+      height: 263px;
+      width: 385px;
+    }
+  }
+  
